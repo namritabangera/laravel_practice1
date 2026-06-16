@@ -44,3 +44,8 @@ Route::get('/student/{name?}',function($name='Guest'){
 
 return view('student',['name'=>$name]);
 });
+
+//named route
+Route::get('/products',function(){
+  return "Product List";
+})->name('products');
