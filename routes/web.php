@@ -30,5 +30,6 @@ Route::get('/products', [ProductController::class,'index']);
 //passing data to view
 Route::get('/profile',function(){
 $name="Namrita";
-return view('profile',['name'=>$name]);
+$products=["Mobile","Laptop","Mouse"];
+return view('profile',['name'=>$name,'products'=>$products]);
 });
