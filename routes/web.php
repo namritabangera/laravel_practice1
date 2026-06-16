@@ -35,7 +35,12 @@ $products=["Mobile","Laptop","Mouse"];
 return view('profile',['name'=>$name,'products'=>$products,'age'=>$age]);
 });
 
-Route::get('/student/{name}', function($name){
+// Route::get('/student/{name}', function($name){
+// return view('student',['name'=>$name]);
+// });
+
+//creating default route
+Route::get('/student/{name?}',function($name='Guest'){
+
 return view('student',['name'=>$name]);
 });
-
