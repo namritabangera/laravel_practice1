@@ -74,6 +74,7 @@ return view('about');
 //pass variable
 Route::get('/display',function(){
 $name="Amrita";
-return view('display',['name'=>$name]);
+$arr=["Php","Laravel","Mysql"];
+return view('display',['name'=>$name,'arr'=>$arr]);
 });
 
