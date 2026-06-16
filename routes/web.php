@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StudentController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -78,3 +80,11 @@ $arr=["Php","Laravel","Mysql"];
 return view('display',['name'=>$name,'arr'=>$arr]);
 });
 
+//Student routes
+Route::get('/students',[StudentController::class,'index']);
+Route::get('/studentlist',[StudentController::class,'disp']);
+
+//Layout routes
+Route::get('/website',function(){
+return view('layouts.productshome');
+});
