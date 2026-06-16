@@ -16,6 +16,7 @@ Route::get('/hello', function(){
 return "Hello Laravel";
 });
 
+
 Route::get('/about',function(){
     return "This is my first laravel application";
 });
@@ -26,3 +27,8 @@ return "Welcome ".$name;
 });
 
 Route::get('/products', [ProductController::class,'index']);
+//passing data to view
+Route::get('/profile',function(){
+$name="Namrita";
+return view('profile',['name'=>$name]);
+});
