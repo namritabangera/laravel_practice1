@@ -49,3 +49,25 @@ return view('student',['name'=>$name]);
 Route::get('/products',function(){
   return "Product List";
 })->name('products');
+
+//create route group
+Route::prefix('admin')->group(function(){
+
+
+Route::get('/dashboard',function(){
+return "Dashboard";
+});
+Route::get('/users',function(){
+return "Users";
+});
+Route::get('/products',function(){
+return "Products";
+});
+
+});
+
+Route::get('/about',function(){
+
+return view('about');
+});
+
