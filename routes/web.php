@@ -71,3 +71,9 @@ Route::get('/about',function(){
 return view('about');
 });
 
+//pass variable
+Route::get('/display',function(){
+$name="Amrita";
+return view('display',['name'=>$name]);
+});
+
