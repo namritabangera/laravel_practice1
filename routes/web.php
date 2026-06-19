@@ -88,3 +88,9 @@ Route::get('/studentlist',[StudentController::class,'disp']);
 Route::get('/website',function(){
 return view('layouts.productshome');
 });
+//product create route
+Route::get('/createProduct',[ProductController::class,'create']);
+//get product 
+Route::get('/getProducts',[ProductController::class,'index']);
+//get product details
+Route::get('/getdetails/{id}',[ProductController::class,'find']);
